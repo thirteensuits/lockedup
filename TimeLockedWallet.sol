@@ -63,8 +63,8 @@ contract TimeLockedWallet {
        WithdrewTokens(_tokenContract, msg.sender, tokenBalance);
     }
 
-    function info() public view returns(address, address, uint256, uint256, uint256) {
-        return (creator, owner, unlockDate, createdAt, this.balance);
+    function amountleft() public view returns(uint256) {
+        return (this.balance);
     }
 
     function timeleft() public view returns(uint256) {
